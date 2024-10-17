@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <meta name="description" content="Sena Filmes - Descubra e explore seus filmes favoritos em diversas categorias">
+    <meta name="theme-color" content="#0d253f">
+    <title>Filmes Sena</title>
+</head>
+<body>
+
+    <header>
+        <form id="form" aria-label="Formulário de pesquisa de filmes">
+            <input type="text" placeholder="Pesquisar filmes" id="search" class="search" aria-label="Pesquisar filmes">
+        </form>
+    </header>
+
+    <div id="tags" aria-label="Gêneros de filmes"></div>
+    
+    <nav id="myNav" class="overlay" aria-hidden="true">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" aria-label="Fechar navegação">&times;</a>
+        <div class="overlay-content" id="overlay-content"></div>
+        <button class="arrow left-arrow" id="left-arrow" aria-label="Página anterior">&#8656;</button> 
+        <button class="arrow right-arrow" id="right-arrow" aria-label="Próxima página">&#8658;</button>
+    </nav>
+
+    <main id="main" aria-live="polite" aria-busy="false">
+        <div id="movie-list" aria-label="Lista de filmes">
+            <div class="movie">
+                <img src="caminho-para-a-imagem-do-filme.jpg" alt="Título do Filme">
+                <div class="movie-info">
+                    <h3>Título do Filme</h3>
+                </div>
+                <div class="overview">
+                    <p>Sinopse do filme aqui. Esta é uma descrição breve do filme.</p>
+                </div>
+            </div>
+            <!-- Adicione mais cartões conforme necessário -->
+        </div>
+    </main>
+
+    <div class="pagination" aria-label="Navegação entre páginas">
+        <button id="prev" class="page" aria-label="Página anterior" disabled>Anterior</button>
+        <div class="current" id="current" aria-label="Página atual">1</div>
+        <button id="next" class="page" aria-label="Próxima página">Próxima</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
